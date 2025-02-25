@@ -1,0 +1,63 @@
+/* Home.css */
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+    padding: 4rem 8%;
+  }
+  
+  .home-content {
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(45deg, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .home-description {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .highlight {
+    color: #60a5fa;
+    font-weight: 600;
+  }
+  
+  .explore-btn {
+    display: inline-block;
+    background: #3b82f6;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .explore-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+  }
+  
+  .home-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  }
+  

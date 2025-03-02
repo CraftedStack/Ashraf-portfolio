@@ -10,7 +10,7 @@ const Contact = () => {
     setMessage(null); // Reset message state
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "<token>"); // Replace with actual token
+    formData.append("access_key", "db22401e-f5b6-444a-9944-059d639a7fd0"); // Replace with actual token
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

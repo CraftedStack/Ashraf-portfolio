@@ -9,13 +9,13 @@ const Footer = () => {
         <h2 className="footer-title">Let's Connect!</h2>
 
         <div className="footer-icons">
-          <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/AshZi03" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub className="icon" />
           </a>
-          <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/ashraf-kazi-9a9143241/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin className="icon" />
           </a>
-          <a href="mailto:your-email@example.com" aria-label="Email">
+          <a href="mailto:ashrafkazi03@gmail.com" aria-label="Email">
             <FaEnvelope className="icon" />
           </a>
         </div>

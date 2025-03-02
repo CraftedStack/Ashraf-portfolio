@@ -5,6 +5,9 @@ import Home from "./content/Home";
 import Projects from "./content/Projects";
 import Contact from "./content/Contact";
 import Footer from "./content/Footer";
+import Skills from "./content/Skills"
+import Certificates from "./content/Certificates"
+
 
 function App() {
   return (
@@ -14,7 +17,9 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/certificates" element={<Certificates />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>

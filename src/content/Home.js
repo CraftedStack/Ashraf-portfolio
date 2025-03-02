@@ -14,7 +14,7 @@ const Home = () => {
         </h1>
         <p className="home-description">
           Hi, I'm <span className="highlight">Ashraf Kazi</span>,  
-          a passionate <span className="highlight">Cloud & DevOps Engineer</span>.
+          a passionate <span className="highlight">Cloud & DevOps Engineer Intern</span>.
           I specialize in <strong>automating infrastructure</strong>, 
           <strong> containerization</strong>, and <strong> cloud deployment</strong>.
         </p>

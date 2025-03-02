@@ -1,112 +1,155 @@
-/* Navbar.css */
+/* Navbar Styles */
 .navbar {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-  }
+  background: rgba(0, 0, 0, 0.7); /* Lighter opacity */
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Navbar Grid Layout */
+.navbar-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+/* Logo (aligned to left) */
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar-logo:hover {
+  color: #60a5fa;
+}
+
+/* Desktop Menu (aligned to top-right) */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-self: end;  /* Align to right */
   
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-  }
+}
+
+.nav-item{
+  color: white;
+  font-size: 1.1rem;
+  transition: 0.3s;
   
-  .navbar-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fafafa;
-    transition: 0.3s;
-  }
-  
-  .navbar-logo:hover {
-    color: #2563eb;
-  }
-  
+}
+.nav-item:hover{
+  color: #60a5fa;
+}
+
+/* Mobile Menu Button (Always Visible in Mobile) */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;  /* Move up */
+  right: 50px; /* Move left */
+  z-index: 102;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(50, 50, 50, 0.9));
+  backdrop-filter: blur(15px);
+  transition: right 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-item {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+  transition: 0.3s;
+  position: relative;
+}
+
+.mobile-item::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #60a5fa;
+  margin: 8px auto 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.mobile-item:hover {
+  color: #60a5fa;
+}
+
+.mobile-item:hover::after {
+  width: 80%;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+}
+
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-    gap: 1.5rem;
+    display: none; /* Hide desktop menu on mobile */
   }
-  
-  .nav-item {
-    font-size: 1rem;
-    color: #e5e7eb;
-    transition: 0.3s;
-  }
-  
-  .nav-item:hover {
-    color: #60a5fa;
-  }
-  
+
   .menu-button {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+    display: block; /* Make sure hamburger is visible */
   }
-  
-  .mobile-menu {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(8px);
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-    z-index: 49; /* Lower than navbar */
-  }
-  
-  .mobile-menu.open {
-    transform: translateY(0);
-    z-index: 50; /* Ensures it's above navbar when opened */
-  }
-  
-  .mobile-item {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    color: white;
-    font-size: 1.2rem;
-    transition: 0.3s;
-    width: 100%;
-  }
-  
-  .mobile-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Fix navbar being unclickable */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    padding: 1rem 2rem;
-    z-index: 50; /* Ensures it's always above */
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  
-    .menu-button {
-      display: block;
-    }
-  }
-  
+}

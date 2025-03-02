@@ -1,0 +1,91 @@
+/* Full-screen container with gradient background */
+.certificates-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #374151, #4b5563);
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  /* Title styling */
+  .certificates-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid layout for certificate cards */
+  .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+  }
+  
+  /* Individual certificate card */
+  .certificate-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .certificate-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Certificate image styling */
+  .certificate-image {
+    width: 80px; /* Adjusted for better mobile display */
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  /* Title link styling */
+  .certificate-title a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .certificate-title a:hover {
+    color: #0056b3;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .certificates-title {
+      font-size: 2rem;
+    }
+  
+    .certificates-grid {
+      grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+  
+    .certificate-card {
+      padding: 15px;
+    }
+  
+    .certificate-image {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  

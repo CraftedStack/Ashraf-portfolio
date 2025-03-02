@@ -12,6 +12,22 @@
     font-weight: 800;
     margin-bottom: 2rem;
   }
+  .project-link{
+    color: rgb(50, 45, 45);
+    background-color: #ccc;
+    border-radius: 20%;
+    display: inline-flex; /* Centers text inside */
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Adjust size */
+    height: 35px; /* Keep width and height same for a circle */
+    text-decoration: none; /* Remove default link underline */
+    font-weight: bold;
+  }
+  .project-link:hover{
+    background-color: #60a5fa;
+    transition: 0.5s;
+  }
   
   .projects-grid {
     display: grid;
